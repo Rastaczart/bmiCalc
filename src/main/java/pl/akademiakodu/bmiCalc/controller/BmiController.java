@@ -14,8 +14,9 @@ public class BmiController {
 public String addValue() {return "/add"; }
 
 @GetMapping("/add")
-    public String showValue (@ModelAttribute Value value ,  ModelMap modelMap ){
+    public String showValue (@ModelAttribute Value value, ModelMap modelMap ){
     modelMap.put("index",value.getInd());
+    modelMap.put("info",value.info());
 return "/show";}
 
 
