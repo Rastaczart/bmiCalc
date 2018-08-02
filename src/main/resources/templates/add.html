@@ -1,41 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>podaj dane</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all"
+           th:href="@{/css/style.css}" />
+
 </head>
+
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <h1>podaj dane </h1>
-        </div>
+<div  >
+<form action="/bmr" >
+    <button type="submit" class="btn btn-lg btn-primary btn-animated">przejdz do BMR</button>
+</form>
+</div>
+<div class="plan">
+<h1 >Kalkulator BMI </h1>
+
+<h2 >podaj dane</h2>
+<form action="add" method="get">
+    <div class="form-group">
+        <label for="postName">waga w kg</label>
+        <input required type="text" class="form-control" id="postName" name="weight"  placeholder="waga w kg, np 70">
     </div>
+    <div class="form-group">
+        <label for="postName">Wysokośćć</label>
+        <input required type="text" class="form-control"  name="height"  placeholder="wysokosc w m, np 1.60">
+    </div>
+    <div name="sex" class="form-group" >
+        <input required type="radio" name="sex" value="woman" checked="false"  />Kobieta
+        <input required type="radio" name="sex" value="man" checked="true" />Mężczyzna
+    </div>
+    <button type="submit" class="btn btn-lg btn-primary btn-animated">zapisz</button>
+</form>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <form action="add" method="get">
-                <div class="form-group">
-                    <label for="postName">waga w kg</label>
-                    <input type="text" class="form-control" id="postName" name="weight">
-                </div>
-                <div class="form-group">
-                    <label for="postName">Wysokośćć w m</label>
-                    <input type="text" class="form-control"  name="height">
-                </div>
-                <div class="form-group">
-                    <input type="radio" name="sex" value="woman" />Kobieta
-                    <input type="radio" name="sex" value="man" />Mężczyzna
-                </div>
-                <button type="submit" class="btn btn-lg btn-primary btn-animated">zapisz</button>
-            </form>
-        </div>
-    </div>
-</div>
+
 </body>
 </html>

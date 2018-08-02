@@ -10,35 +10,25 @@
           th:href="@{/css/style.css}" />
 </head>
 <body>
-
-
-<div class="plan">
-    <h1 >Twój wynik to</h1>
-    <form action="add" method="get">
-        <div class="form-group">
-            <div class="div-plan">
-                <p  th:text="${index}"/>
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Kalkulator BMR</h1>
             </div>
         </div>
-        <div class="form-group">
-            <div class="div-plan">
-                <p th:text="${info}"/>
-            </div>
-        </div>
-    </form>
-    <form action="/" >
-       <button type="submit" class="btn btn-lg btn-primary btn-animated">Wróć</button>
-    </form>
+    </div>
 </div>
 
-
-
-
-
-
-
-
-
-
+<div class="container">
+    <div class="well">
+        <div class="media">
+            <div class="media-body">
+                <label> twoja dawka calorii to: </label>
+                <p th:text="${index}"/>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
