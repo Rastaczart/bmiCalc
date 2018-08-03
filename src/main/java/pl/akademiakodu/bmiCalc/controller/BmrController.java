@@ -9,14 +9,14 @@ import pl.akademiakodu.bmiCalc.model.Bmr;
 @Controller
 public class BmrController {
     @GetMapping("/bmr")
-    public String addBmr(){ return "/addbmr"; }
+    public String addBmr() {
+        return "addbmr";
+    }
 
     @GetMapping("/addbmr")
-    public String Bmrshow(@ModelAttribute Bmr bmr, ModelMap modelMap){
-        modelMap.put("index",bmr.bmrindex());
-        return "/showbmr"; }
-
-
-
-
+    public String Bmrshow(@ModelAttribute Bmr bmr, ModelMap modelMap) {
+        System.out.println("bmr " + bmr + " a wartosc to" + bmr.bmrIndex());
+        modelMap.put("index", bmr.bmrIndex());
+        return "/showbmr";
+    }
 }

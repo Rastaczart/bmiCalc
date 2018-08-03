@@ -22,10 +22,12 @@
 <div class="plan">
     <h1 >Kalkulator BMR </h1>
     <h2 >podaj dane</h2>
-<div>
+    <div>
+        <form action="addbmr" method="get">
+            <div>
   <label for="postName">waga w kg</label>
  <input required type="text" class="form-control" id="postName" name="weight"  placeholder="waga w kg, np 70">
-</div>
+            </div>
 
 <div  class="form-group" >
     <label> płeć </label>
@@ -35,11 +37,12 @@
 <div>
  <label>Poziom aktywności fizycznej </label>
     <input required type="radio" name="index" value="1" />brak aktywności
-                        <input required type="radio" name="index" value="1.15" />mała aktywność
-                        <input required type="radio" name="index" value="1.3" />średnia aktywność
-                        <input required type="radio" name="index" value="1.5" /> duża aktywność
+    <input required type="radio" name="index" value="1.15" />mała aktywność
+    <input required type="radio" name="index" value="1.3" />średnia aktywność
+    <input required type="radio" name="index" value="1.5" /> duża aktywność
 </div>
-    <button type="submit" class="btn btn-lg btn-primary btn-animated">zapisz</button>
+    <button  type="submit" class="btn btn-lg btn-primary btn-animated">zapisz</button>
+    </form>
 </div>
 
 

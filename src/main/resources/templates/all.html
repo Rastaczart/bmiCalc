@@ -9,16 +9,31 @@
           th:href="@{/css/style.css}" />
 </head>
 <body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Lista wszystkich wyników</h1>
+        </div>
+    </div>
+</div>
 
-
-
-<div class="plan">
-
-    <div th:each="value : ${values}">
-        <p th: text="${value.weight}"/>
-        <p th:text="${value.height}"/>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-bordered table-hover table-custom">
+                <tr class="success">
+                    <th>Id</th>
+                    <th>weight</th>
+                    <th>height</th>
+                </tr>
+                <tr th:each="value: ${values}">
+                    <td th:text="${value.id}"></td>
+                    <td th:text="${value.weight}"></td>
+                    <td th:text="${value.height}"></td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
 
 </body>
-</html>

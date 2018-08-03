@@ -27,8 +27,7 @@ public String addValue() {return "/add"; }
 return "/show";}
 @GetMapping("/all")
     public String showAll (ModelMap modelMap){
-    modelMap.put("value",bmiDao.findAll());
-    System.out.println(bmiDao.findAll());
+    modelMap.put("values",bmiDao.findAll());
     return "/all";
 }
 
